@@ -1,0 +1,5 @@
+## arg 1:  the old package version
+pre_remove() {
+	sudo unlink "/usr/lib/avr"
+	sudo rm /etc/udev/rules.d/50-b15f.rules
+}
