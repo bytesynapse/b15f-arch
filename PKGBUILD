@@ -1,6 +1,6 @@
 # Maintainer: Bytesynapse <bytesynapse@proton.me>
 pkgname='b15f-git'
-pkgver='1.0'
+pkgver='1.1'
 pkgrel=1
 pkgdesc="The library and software for interacting with the B15F board."
 arch=('x86_64')
@@ -26,8 +26,6 @@ build() {
   sudo udevadm trigger
 
   echo "Loading project data..."
-
-  rm -f "$srcdir/$pkgname/install"
 
   if [ ! -f "/etc/b15f.mcu" ]; then
     echo "atmega1284p" | sudo tee /etc/b15f.mcu
