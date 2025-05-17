@@ -1,6 +1,6 @@
 pkgbase = b15f-git
 	pkgdesc = The library and software for interacting with the B15F board.
-	pkgver = 1.1
+	pkgver = r242.5a49a37
 	pkgrel = 1
 	url = https://github.com/devfix/b15f
 	install = b15f.install
@@ -13,7 +13,11 @@ pkgbase = b15f-git
 	depends = ncurses
 	depends = gcc
 	depends = astyle
+	source = 50-b15f.rules
+	source = b15f.mcu
 	source = b15f-git::git+https://github.com/devfix/b15f.git
+	sha256sums = SKIP
+	sha256sums = SKIP
 	sha256sums = SKIP
 
 pkgname = b15f-git
