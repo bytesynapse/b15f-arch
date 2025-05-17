@@ -1,0 +1,7 @@
+# B15F board access
+SUBSYSTEM!="usb_device", ACTION!="add", GOTO="avrisp_end"
+
+SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", MODE="0666", GROUP="uucp"
+
+# LABEL="avrisp_end"
+

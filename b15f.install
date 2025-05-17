@@ -1,9 +1,6 @@
-## arg 1:  the old package version
-pre_remove() {
-	sudo unlink "/usr/lib/avr"
-	sudo rm /etc/udev/rules.d/50-b15f.rules
-	sudo rm /usr/lib/libb15fdrv.so
-	sudo rm /usr/bin/b15fcli
-	sudo rm /usr/bin/plotty
-	sudo rm /usr/include/b15f/ -r
+post_install() {
+    echo "Reloading udev rules for B15F board..."
+    udevadm control --reload-rules
+    udevadm trigger
+    echo "If your B15F board is already plugged in, remove and re-plug it now."
 }
